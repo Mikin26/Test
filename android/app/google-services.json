@@ -1,0 +1,39 @@
+ {
+  "project_info": {
+    "project_number": "155482325429",
+    "project_id": "apple-products-1068d",
+    "storage_bucket": "apple-products-1068d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155482325429:android:146106c2a86672307499fc",
+        "android_client_info": {
+          "package_name": "com.example.ecommerceapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "155482325429-elrell6unrif6ck2eksv02tq7trl2ajl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqeDQDnNoNJYLAhnRitC9SopAFbl27Pvc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "155482325429-elrell6unrif6ck2eksv02tq7trl2ajl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

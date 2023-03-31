@@ -5,7 +5,9 @@ import 'package:flutter/material.dart';
 
 class Addtocart extends StatefulWidget {
   Products x = Products();
+
   Addtocart(this.x);
+
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
@@ -14,80 +16,106 @@ class Addtocart extends StatefulWidget {
 }
 
 class _AddtocartState extends State<Addtocart> {
-@override
+  @override
   void initState() {
     // TODO: implement initState
-
   }
-  @override
 
+  @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-
-        appBar: AppBar(
-          centerTitle: true,
-          title: Text("Add to Cart"),
-          backgroundColor: Colors.black,
-        ),
-        body: SingleChildScrollView(
-          child: Column(
-            children: Aboutphone1.cart.map((e) {
-              return Column(
-                children: [
-
-                  Container(
-                    decoration: BoxDecoration(
-                        border: Border(bottom: BorderSide(color: Colors.black))),
-                    margin: EdgeInsets.all(10),
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text("Add to Cart"),
+        backgroundColor: Colors.black,
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: Aboutphone1.cart.map((e) {
+            return Column(
+              children: [
+                Container(
+                  margin: EdgeInsets.all(10),
+                  child: Text(
+                    "Subtotal:- " + widget.x.price.toString(),
+                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                   ),
-                  Row(
-                    children: [
-                      Container(
-                        child: Image.network(
-                          e.image,
-                          height: 170,
-                          width: 170,
-                        ),
+                ),
+                Container(
+                  height: 40,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                      color: Colors.yellow,
+                      borderRadius: BorderRadius.circular(10)),
+                  margin: EdgeInsets.all(10),
+                  child: Text(
+                    "Proceed to checkout",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                      border: Border(bottom: BorderSide(color: Colors.black))),
+                  margin: EdgeInsets.all(10),
+                ),
+                Row(
+                  children: [
+                    Container(
+                      margin: EdgeInsets.all(5),
+                      child: Image.network(
+                        e.image,
+                        height: 170,
+                        width: 170,
                       ),
-                      Row(
+                    ),
+                    Container(
+                      alignment: Alignment.topLeft,
+                      padding: EdgeInsets.all(5),
+                      height: 200,
+                      width: 200,
+                      child: Column(
                         children: [
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Container(
-                                // margin: EdgeInsets.only(bottom: 100),
-                                  child: Text(e.name,style:
-                                  TextStyle(
-                                      fontSize: 15
-                                  ),)),
-                              Container(
-                                  margin: EdgeInsets.only(right: 60),
-                                  child: Text(e.Size,style:
-                                  TextStyle(
-                                      fontSize: 15
-                                  ),)),
-                              Container(
-                                  margin: EdgeInsets.only(right: 46),
-                                  child: Text("Size:"+ e.Size,style:
-                                  TextStyle(
-                                      fontSize: 15
-                                  ),)),
-                              Container(
-                                  margin: EdgeInsets.only(bottom: 120,right: 14),
-                                  child: Text("Color: Deeppurple")),
-                            ],
-                          )
-                        ],
-                      )
-                    ],
-                  ),
-                ],
-              );
+                          Container(
+                            padding: EdgeInsets.only(top: 10,bottom: 10),
+                              alignment: Alignment.topLeft,
+                          child: Text(e.About,style: TextStyle(
+                            fontSize: 18,overflow: TextOverflow.ellipsis,
+                          ),maxLines: 2,),),
+                          Container(
+                            padding: EdgeInsets.only(bottom: 5),
+                            alignment: Alignment.topLeft,
+                            child: Text(e.price.toString(),style: TextStyle(
+                                fontSize: 22,fontWeight: FontWeight.w900
+                            ),),),
+                          Container(
+                            alignment: Alignment.topLeft,
+                            child: Text(e.name,style: TextStyle(
+                                fontSize: 16,color: Colors.grey.shade600
+                            ),),),
 
-            }).toList(),
-          ),
+                          Container(
+                              alignment: Alignment.topLeft,
+                              child: Text(
+                                "Size:" + e.Size,
+                                style: TextStyle(fontSize: 15),
+                              )),
+                          Container(
+                            alignment: Alignment.topLeft,
+                            child: Text(e.Style,style: TextStyle(
+                              fontSize: 18,
+                            ),),),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            );
+          }).toList(),
         ),
+      ),
     );
   }
+
 }

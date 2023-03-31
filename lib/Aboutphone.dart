@@ -94,7 +94,7 @@ class _AboutphoneState extends State<Aboutphone1> {
                 Container(
                   margin: EdgeInsets.only(top: 10,left: 20),
                   child: Text(
-                    "Total :- " + widget.p.price,
+                    "Total :- " + widget.p.price.toString(),
                     style: TextStyle(
                       fontSize: 20,
                     ),

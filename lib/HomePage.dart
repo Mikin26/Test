@@ -117,7 +117,7 @@ class _HomePage extends State<HomePage> {
                                       fontSize: 15, fontWeight: FontWeight.bold),
                                 ),
                               ),
-                              Container(child: Text(e.price)),
+                              Container(child: Text(e.price.toString())),
                             ],
                           ),
                         ),
@@ -141,9 +141,9 @@ class _HomePage extends State<HomePage> {
   void initState() {
     Products a = Products(
       Size: "128 gb",
-      About: "iphone 14 pro max",
+      About: "iphone 14 pro max 8GB (Dark Nova, 128 GB RAM, 256GB storage)",
         name: "iphone 14 pro Max",
-        price: "1,49,000/-",
+        price: 149000,
         image:
             "https://www.reliancedigital.in/medias/Apple-iPhone-14-Pro-Max-Mobile-Phone-493177802-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wyMzk2N3xpbWFnZS9qcGVnfGltYWdlcy9oM2EvaGM1Lzk4OTA3MzQxNDU1NjYuanBnfDE2ZDAxYjgwYmYxZjFmZGFiZDQwMWZkNzUyMzYyYTc4Yjc2MDVkZWUyYWJjODkxMjFhY2MyMzk3M2MyYWIyMTY",
         ad: [Colors.deepPurple,Color(0xFFf3e5cc),Color(0xffeef1f0),Color(0xff595552)]);
@@ -155,10 +155,10 @@ class _HomePage extends State<HomePage> {
             "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/81gC7frRJyL._SX522_.jpg",
         name: "ipad pro",
         ad: [Colors.grey,Color(0xff49494b)],
-        price: "96,900/-");
+        price: 96900);
     Products c = Products(
         name: "iphone 13",
-        price: "69,900/-",
+        price: 69900,
         ad: [Color(0xff1f5d7a),Color(0xff8b0010),Color(0xfff5dbd4),Color(0xff364836),Color(0xfff8f3ee),Color(0xff151d25)],
         Size: "128 gb",
         About: "iphone 13",
@@ -166,7 +166,7 @@ class _HomePage extends State<HomePage> {
             "https://d2xamzlzrdbdbn.cloudfront.net/products/be07ec4f-c214-497f-930f-24be44406ccb21170555.jpg");
     Products d = Products(
         name: "iphone 12",
-        price: "59,900/-",
+        price: 59900,
         ad: [Color(0xffdbf1d8),Color(0xffb4a9e1),Colors.black,Color(0xff8b0010),],
         About: "iphone 12",
         Size: "128 gb",
@@ -174,7 +174,7 @@ class _HomePage extends State<HomePage> {
             "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/31jQ91XUDhS.jpg");
     Products e = Products(
         name: "Apple Watch Ultra",
-        price: "89,900/-",
+        price: 89900,
         Size: "45mm",
         About: "Apple Watch Ultra",
         ad: [Color(0xfff06b39),Color(0xff364836),Color(0xffeef1f0)],
@@ -182,7 +182,7 @@ class _HomePage extends State<HomePage> {
             "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MQDY3ref_VW_34FR+watch-49-titanium-ultra_VW_34FR_WF_CO+watch-face-49-alpine-ultra_VW_34FR_WF_CO_GEO_IN?wid=750&hei=712&trim=1%2C0&fmt=p-jpg&qlt=95&.v=1660713659063%2C1660927566964%2C1661371890735");
     Products f = Products(
         name: "ipad air",
-        price: "59,900/-",
+        price: 59900,
         ad: [Color(0xff1f5d7a),Color(0xff8b0010),Color(0xfff5dbd4),Color(0xff364836),Color(0xfff8f3ee),Color(0xff151d25)],
         image:
             "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/ipad-air-select-wifi-purple-202203?wid=940&hei=1112&fmt=png-alpha&.v=1645066730601");
@@ -190,12 +190,12 @@ class _HomePage extends State<HomePage> {
         name: "MacBook Pro",
         Size: "16 gb RAM 512 gb",
         ad: [Colors.grey,Color(0xff49494b)],
-        price: "1,29,900/-",
+        price: 129900,
         image:
             "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mbp-silver-select-202206?wid=1280&hei=1190&fmt=jpeg&qlt=90&.v=1664497095569");
     Products h = Products(
         name: "AirPods Max",
-        price: "59,900/-",
+        price: 59900,
 
         ad: [Colors.grey,Color(0xff49494b)],
         image:
